@@ -11,4 +11,4 @@ jobs:
       - name: Debugging Feed Generator
         run: |
           set -x  
-          python feed.py
+          python feed.py 
