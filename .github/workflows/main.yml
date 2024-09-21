@@ -6,6 +6,5 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
       - name: Run Feed Generator
         uses: planetoftheweb/podcast-generator@main
