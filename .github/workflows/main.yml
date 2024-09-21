@@ -12,9 +12,12 @@ jobs:
         id: podcast_generator
         uses: OlaHalawani/podcast-generator@main
 
+      - name: List Files
+        run: ls -R /home/runner/work/podcast-test/podcast-test
+
       - name: Debugging Output
-        if: failure()  # Only run this step if the previous step failed
+        if: failure()
         run: |
           echo "Debugging Feed Generator"
           set -x  
-          python feed.py
+          python /usr/bin/feed.py  # Ensure this matches the Docker container's path
