@@ -20,11 +20,14 @@ jobs:
           pip install pyyaml
       - name: Run Feed Generator
         run:  python feed.py
+      - name: Debugging Feed Generator
+        run: |
+          set -x  # Enables detailed shell debug output 
+          python feed.py
       - name: Push Repo
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "Modified Feed"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Modified Feed"
           git push
-          
