@@ -10,5 +10,5 @@ jobs:
         uses: OlaHalawani/podcast-generator@main
       - name: Debugging Feed Generator
         run: |
-          set -x 
+          set -x  
           python feed.py
