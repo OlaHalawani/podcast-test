@@ -20,4 +20,4 @@ jobs:
         run: |
           echo "Debugging Feed Generator"
           set -x  
-          python /usr/bin/feed.py  # Ensure this matches the Docker container's path
+          python /usr/bin/feed.py 
